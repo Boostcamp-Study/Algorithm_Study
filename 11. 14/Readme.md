@@ -4,6 +4,6 @@
 
 https://www.acmicpc.net/problem/14501
 
-https://www.acmicpc.net/workbook/view/2418
+BOJ 길라잡이 문제집: https://www.acmicpc.net/workbook/view/2418
 
 난이도는 낮은순서대로 정렬할 예정
