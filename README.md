@@ -12,5 +12,4 @@ solved CodingTest &amp; Reviews
 📘 레포지토리 관리
 - 파일명 형식 : {Readme 문제번호}\_{문제번호}\_{github ID}
 
-아래 주소에서 참고할 예정
-https://www.acmicpc.net/workbook/top
+(이 주소에서 참고할 예정)[https://www.acmicpc.net/workbook/top]
