@@ -11,7 +11,7 @@ output
 '''
 
 N = int(input())
-my_card = set(map(int, input().split()))  # Use a set for faster lookups
+my_card = set(map(int, input().split()))
 
 M = int(input())
 check_card = list(map(int, input().split()))
