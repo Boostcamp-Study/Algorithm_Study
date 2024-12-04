@@ -5,36 +5,28 @@ T = int(input())
 for _ in range(T):
     commands = input() 
     n = int(input())
-    R_cnt = commands.count('R')
-    # str to list 
-    l = input()[1:-1].split(',')
+    arr = input()[1:-1]
+    # 빈 배열 처리
+    l = arr.split(',') if arr else []
     flag = 1
+    error = False
 
-    for i in range(len(commands)): 
-        command = commands[i] 
-
-        print(command, len(l), l)
-
-
+    for command in commands:
         if command == "R":
             flag *= -1
-        elif command == "D" and len(l) > 0:
-            if  flag == 1:  
+        elif command == "D":
+            if not l:  # 배열이 비어있을 때
+                error = True
+                break
+            if flag == 1:
                 l.pop(0)
-            else: 
+            else:
                 l.pop()
-        else:
-            print("error")
-            continue
 
-    # R이 홀수면 뒤집기 연산 
-    if R_cnt%2 == 1:
-        l = l[::-1]    
-
-    # str로 출력
-    if len(l) >= 0:
-        l = "[" + ",".join(l) + "]"
-        print(l)    
-    else:
+    if error:
         print("error")
+    else:
+        if flag == -1:  # R 명령어 최종 처리
+            l.reverse()
+        print("[" + ",".join(l) + "]")
 
