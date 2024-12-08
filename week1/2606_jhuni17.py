@@ -2,20 +2,16 @@
 # 딕서녀리로 연결 컴퓨터 표현
 # 연결 컴퓨터를 1부터 bfs로 탐색, 집합에 방문 컴퓨터 기록
 
+from collections import defaultdict
+
 cpu_num = int(input())
 N = int(input())
 
-connect = {}
+connect = defaultdict(list)
 for _ in range(N):
     a, b = map(int, input().split())
-    if a not in connect:
-        connect[a] = [b]
-    else:
-        connect[a].append(b)
-    if b not in connect:
-        connect[b] = [a]
-    else:
-        connect[b].append(a)
+    connect[a].append(b)
+    connect[b].append(a)
 
 def solution(connect):
     visit = set()
