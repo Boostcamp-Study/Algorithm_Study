@@ -19,11 +19,11 @@ def solution(connect):
     queue.append(1)
     while queue:
         cpu = queue.pop(0)
-        visit.add(cpu)
         if cpu in connect:
             for node in connect[cpu]:
                 if node not in visit:
                     queue.append(node)
+                    visit.add(node)
     
     return len(visit) - 1
 
