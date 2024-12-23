@@ -1,0 +1,13 @@
+s = input() 
+ex_s = input() 
+
+len_ex_s = len(ex_s)
+stack = []
+
+for i in s:
+    stack.append(i)
+    if "".join(stack[-len_ex_s:]) == ex_s: 
+        del stack[-len_ex_s:]
+
+result = ''.join(stack)
+print(result if result else "FRULA")
